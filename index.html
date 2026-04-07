@@ -2,12 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Coming Soon</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <main class="hero">
+    <canvas id="bg3d"></canvas>
     <div class="overlay"></div>
 
     <section class="content">
@@ -17,10 +19,14 @@
         We are getting ready to launch our new fashion website.
         Stay tuned for fresh arrivals and exclusive drops.
       </p>
-
       <a href="#" class="btn">Notify Me</a>
     </section>
   </main>
+
+  <!-- Three.js -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/js/loaders/GLTFLoader.js"></script>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
