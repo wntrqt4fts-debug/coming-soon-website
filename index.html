@@ -5,12 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grand Theft Auto VI</title>
     
-    <!-- Inter Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
     <script>
@@ -41,16 +39,13 @@
             background-color: #f5f5f7;
             color: #1d1d1f;
             -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
         }
-
         .glass-nav {
             background: rgba(255, 255, 255, 0.72);
             backdrop-filter: blur(20px) saturate(180%);
             -webkit-backdrop-filter: blur(20px) saturate(180%);
             border-bottom: 1px solid rgba(255, 255, 255, 0.5);
         }
-
         .glass-card {
             background: rgba(255, 255, 255, 0.65);
             backdrop-filter: blur(24px);
@@ -58,22 +53,16 @@
             border: 1px solid rgba(255, 255, 255, 0.8);
             box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
         }
-
-        .rounded-apple {
-            border-radius: 28px;
-        }
-
+        .rounded-apple { border-radius: 28px; }
         .text-gradient-pastel {
             background: linear-gradient(135deg, #ff7eb3 0%, #ff758c 40%, #8b5cf6 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        
         .bg-gradient-miami {
             background: linear-gradient(135deg, #00f2fe 0%, #4facfe 30%, #f093fb 70%, #f5576c 100%);
         }
-
         .ambient-blob {
             position: absolute;
             border-radius: 50%;
@@ -81,42 +70,43 @@
             z-index: -1;
             opacity: 0.4;
         }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
 <body class="relative overflow-x-hidden pt-12">
 
+    <!-- Ambient blobs -->
     <div class="ambient-blob w-96 h-96 bg-purple-300 top-20 left-[-10%]"></div>
     <div class="ambient-blob w-[500px] h-[500px] bg-pink-200 top-40 right-[-5%]"></div>
     <div class="ambient-blob w-80 h-80 bg-blue-200 bottom-20 left-[10%]"></div>
 
-    <nav class="fixed top-0 w-full z-40 glass-nav transition-all duration-300">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-40 glass-nav">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-14 sm:h-16">
-                <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center cursor-pointer">
+                <div class="flex-shrink-0 flex items-center">
                     <span class="text-xl font-bold tracking-tighter text-gradient-pastel">VI</span>
                 </div>
                 
-                <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-6 items-center">
                     <a href="#overview" class="text-xs text-apple-text hover:text-black transition-colors font-medium tracking-wide">Overview</a>
-                    <a href="#cover" class="text-xs text-apple-text hover:text-black transition-colors font-medium tracking-wide">CD Cover</a>
+                    <a href="#cover" class="text-xs text-apple-text hover:text-black transition-colors font-medium tracking-wide">Cover</a>
                     <a href="#trailers" class="text-xs text-apple-text hover:text-black transition-colors font-medium tracking-wide">Trailers</a>
                     <a href="#screenshots" class="text-xs text-apple-text hover:text-black transition-colors font-medium tracking-wide">Screenshots</a>
                     <a href="#pre-order" class="text-xs text-apple-text hover:text-black transition-colors font-medium tracking-wide">Editions</a>
                     <a href="#pre-order" class="bg-apple-blue hover:bg-apple-blue-hover text-white text-xs font-medium px-4 py-1.5 rounded-full transition-colors shadow-sm">Pre-order</a>
                 </div>
 
-                <!-- Mobile Menu Button -->
-                <div class="md:hidden flex items-center">
-                    <a href="#pre-order" class="bg-apple-blue text-white text-xs font-medium px-4 py-1.5 rounded-full transition-colors shadow-sm">Pre-order</a>
+                <div class="md:hidden">
+                    <a href="#pre-order" class="bg-apple-blue text-white text-xs font-medium px-4 py-1.5 rounded-full">Pre-order</a>
                 </div>
             </div>
         </div>
     </nav>
 
+    <!-- Hero + Countdown -->
     <main id="overview" class="pt-24 pb-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto flex flex-col items-center text-center">
-        
         <h1 class="text-4xl md:text-6xl font-bold tracking-tight mb-4">
             COMING <span class="text-gradient-pastel">NOVEMBER 19, 2026</span>
         </h1>
@@ -124,379 +114,288 @@
             Experience the next generation of open-world entertainment in Leonida.
         </p>
 
-        <!-- Horizontal Countdown Timer matching requested reference layout -->
         <div class="glass-card rounded-apple p-6 sm:p-10 w-full max-w-3xl flex flex-col items-center relative overflow-hidden shadow-apple">
-            <h2 class="text-xs sm:text-sm font-semibold tracking-widest text-gradient-pastel uppercase mb-6">GRAND THEFT AUTO VI LAUNCHES IN</h2>
+            <h2 class="text-xs sm:text-sm font-semibold tracking-widest text-gradient-pastel uppercase mb-6">
+                GRAND THEFT AUTO VI LAUNCHES IN
+            </h2>
             
             <div class="flex items-center justify-center gap-2 sm:gap-6 w-full flex-wrap">
-                <!-- Days -->
                 <div class="flex flex-col items-center">
-                    <span id="days" class="text-3xl sm:text-5xl font-semibold tabular-nums text-apple-text min-w-[2ch] inline-block text-center text-gradient-pastel">00</span>
+                    <span id="days" class="text-3xl sm:text-5xl font-semibold tabular-nums text-gradient-pastel min-w-[2ch]">00</span>
                     <span class="text-[10px] sm:text-xs font-bold text-apple-text-secondary mt-1 tracking-widest uppercase">DAYS</span>
                 </div>
-                
                 <span class="text-3xl sm:text-5xl font-light text-purple-400 pb-5">:</span>
-
-                <!-- Hours -->
                 <div class="flex flex-col items-center">
-                    <span id="hours" class="text-3xl sm:text-5xl font-semibold tabular-nums text-apple-text min-w-[2ch] inline-block text-center text-gradient-pastel">00</span>
+                    <span id="hours" class="text-3xl sm:text-5xl font-semibold tabular-nums text-gradient-pastel min-w-[2ch]">00</span>
                     <span class="text-[10px] sm:text-xs font-bold text-apple-text-secondary mt-1 tracking-widest uppercase">HOURS</span>
                 </div>
-
                 <span class="text-3xl sm:text-5xl font-light text-purple-400 pb-5">:</span>
-
-                <!-- Minutes -->
                 <div class="flex flex-col items-center">
-                    <span id="minutes" class="text-3xl sm:text-5xl font-semibold tabular-nums text-apple-text min-w-[2ch] inline-block text-center text-gradient-pastel">00</span>
+                    <span id="minutes" class="text-3xl sm:text-5xl font-semibold tabular-nums text-gradient-pastel min-w-[2ch]">00</span>
                     <span class="text-[10px] sm:text-xs font-bold text-apple-text-secondary mt-1 tracking-widest uppercase">MINUTES</span>
                 </div>
-
                 <span class="text-3xl sm:text-5xl font-light text-purple-400 pb-5">:</span>
-
-                <!-- Seconds -->
                 <div class="flex flex-col items-center">
-                    <span id="seconds" class="text-3xl sm:text-5xl font-semibold tabular-nums text-apple-text min-w-[2ch] inline-block text-center text-gradient-pastel">00</span>
+                    <span id="seconds" class="text-3xl sm:text-5xl font-semibold tabular-nums text-gradient-pastel min-w-[2ch]">00</span>
                     <span class="text-[10px] sm:text-xs font-bold text-apple-text-secondary mt-1 tracking-widest uppercase">SECONDS</span>
                 </div>
             </div>
         </div>
     </main>
 
+    <!-- Cover Art -->
     <section id="cover" class="py-16 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
         <div class="text-center mb-10">
-            <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-apple-text">Official Cover Art</h2>
+            <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Official Cover Art</h2>
             <p class="text-md text-apple-text-secondary mt-2">Physical & Digital Edition Packaging</p>
         </div>
 
-        <div class="flex flex-col items-center justify-center">
+        <div class="flex flex-col items-center">
             <div class="glass-card rounded-apple p-4 sm:p-8 max-w-md w-full shadow-apple transition-transform duration-500 hover:scale-[1.02]">
                 <div class="relative rounded-2xl overflow-hidden aspect-[3/4] shadow-lg bg-black">
-                    <!-- CD Cover Image URL (Editable) -->
-                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1000&auto=format&fit=crop" 
-                         alt="GTA VI CD Cover Art" 
-                         onerror="this.src='https://placehold.co/600x800/1d1d1f/ffffff?text=GTA+VI+Cover+Art'"
-                         class="w-full h-full object-cover opacity-90">
+                    <img src="https://i.ibb.co/rKDnG7PN/IMG-5891.jpg" 
+                         alt="GTA VI Cover Art" 
+                         class="w-full h-full object-cover opacity-90"
+                         onerror="this.src='https://placehold.co/600x800/1d1d1f/ffffff?text=GTA+VI'">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-6 text-white">
                         <h3 class="text-2xl font-bold">Grand Theft Auto VI</h3>
-                        <p class="text-xs text-gray-300 mt-1">Includes physical disc / digital license key + bonus poster.</p>
+                        <p class="text-xs text-gray-300 mt-1">PlayStation 5 • Xbox Series X|S</p>
                     </div>
                 </div>
 
-                <!-- Platform Badges & Pre-Order Button directly underneath as requested -->
                 <div class="mt-6 flex flex-col items-center gap-4">
-                    <div class="flex items-center gap-4">
-                        <!-- PlayStation 5 Link Badge -->
-                        <a href="https://www.playstation.com" target="_blank" rel="noopener noreferrer" class="text-apple-text hover:text-apple-blue font-bold text-xs flex items-center gap-1.5 transition-colors">
-                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M18.7 15.3c-.6-.3-3.7-1.8-4.3-2-.6-.2-1-.2-1.4.3-.4.6-1.6 2-2 2.4-.4.4-.8.4-1.4.1-.6-.3-2.5-.9-4.7-2.9-1.8-1.6-3-3.5-3.4-4.1-.4-.6 0-.9.3-1.2.3-.3.6-.8.9-1.2.3-.4.4-.6.6-1 .2-.4.1-.8 0-1.1-.1-.3-1.4-3.4-1.9-4.7-.5-1.2-1-1.1-1.4-1.1h-1.2c-.4 0-1.1.2-1.7.8s-2.1 2-2.1 4.9 2.2 5.7 2.5 6.1c.3.4 4.3 6.6 10.4 9.3 5.8 2.5 7 2.1 8.3 2 1.3-.1 4.3-1.8 4.9-3.5.6-1.7.6-3.2.4-3.5-.2-.3-.6-.5-1.2-.8z"/></svg>
-                            PS5
-                        </a>
+                    <div class="flex items-center gap-4 text-xs font-bold">
+                        <a href="https://www.playstation.com" target="_blank" class="hover:text-apple-blue transition-colors">PS5</a>
                         <span class="text-gray-300">|</span>
-                        <!-- Xbox Series X|S Link Badge -->
-                        <a href="https://www.xbox.com" target="_blank" rel="noopener noreferrer" class="text-apple-text hover:text-emerald-600 font-bold text-xs flex items-center gap-1.5 transition-colors">
-                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm4.55 18.25c-.25-.15-1.35-.95-2.6-2.15-1.25 1.2-2.35 2-2.6 2.15-.35.2-.75.3-1.15.2-1.6-.4-3.3-2.1-4.2-4.5-.4-1.1-.6-2.2-.6-3.3 0-3.3 1.9-6 4.6-7.3.3-.1.6-.2 1-.2 1.1 0 2.2.5 3.2 1.4 1 1 1.7 2.4 2 3.9.3 1.5.1 3-.5 4.3-.8 1.9-2.3 3.3-3.4 3.8-.4.2-.8.2-1.1.1z"/></svg>
-                            XBOX SERIES X|S
-                        </a>
+                        <a href="https://www.xbox.com" target="_blank" class="hover:text-emerald-600 transition-colors">Xbox Series X|S</a>
                     </div>
-                    <a href="#pre-order" class="w-full bg-apple-blue hover:bg-apple-blue-hover text-white text-sm font-semibold py-3 px-6 rounded-full transition-colors shadow-sm text-center">
-                        Pre-Order Now
+                    <a href="https://www.rockstargames.com/VI/" target="_blank" 
+                       class="w-full bg-apple-blue hover:bg-apple-blue-hover text-white text-sm font-semibold py-3 px-6 rounded-full transition-colors text-center">
+                        Pre-Order on Rockstar
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Trailers -->
     <section id="trailers" class="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
         <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-apple-text">Trailers & Footage</h2>
-            <p class="text-md text-apple-text-secondary mt-2">Explore the official cinematic look into Leonida.</p>
+            <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Trailers & Footage</h2>
+            <p class="text-md text-apple-text-secondary mt-2">Official cinematic look into Leonida</p>
         </div>
 
         <div class="flex overflow-x-auto pb-6 gap-6 no-scrollbar snap-x">
-            <!-- Trailer 1 (Tall Aspect Ratio matching reference photo) -->
+            <!-- Trailer 1 -->
             <div class="flex flex-col min-w-[280px] sm:min-w-[340px] md:min-w-[380px] snap-start flex-shrink-0">
-                <div class="relative w-full aspect-[3/4] rounded-apple overflow-hidden shadow-apple cursor-pointer group bg-gradient-miami flex items-center justify-center">
-                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1000&auto=format&fit=crop" 
-                         alt="Trailer 1 Thumbnail"
-                         onerror="this.src='https://placehold.co/800x1066/1d1d1f/ffffff?text=Trailer+1'"
-                         class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent group-hover:opacity-90 transition-opacity duration-300"></div>
+                <div class="relative w-full aspect-[3/4] rounded-apple overflow-hidden shadow-apple group bg-gradient-miami">
+                    <img src="https://i.ibb.co/kVcPStqt/IMG-5892.jpg" 
+                         alt="Trailer 1" class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                     
-                    <a href="https://www.youtube.com/watch?v=QdBZY2fkU-0" target="_blank" rel="noopener noreferrer" class="glass-card w-20 h-20 rounded-full flex items-center justify-center relative z-10 transition-all duration-300 transform-gpu group-hover:scale-110 group-hover:shadow-lg">
+                    <a href="https://www.youtube.com/watch?v=QdBZY2fkU-0" target="_blank" rel="noopener"
+                       class="glass-card w-20 h-20 rounded-full flex items-center justify-center absolute inset-0 m-auto z-10 group-hover:scale-110 transition-all">
                         <svg class="w-7 h-7 text-white ml-1" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
                     </a>
 
                     <div class="absolute bottom-6 left-6 right-6 text-white z-10">
                         <p class="text-xs font-semibold tracking-widest text-gray-300 uppercase mb-1">WATCH</p>
-                        <h3 class="text-2xl sm:text-3xl font-bold tracking-tight text-white">TRAILER 1</h3>
+                        <h3 class="text-2xl sm:text-3xl font-bold">TRAILER 1</h3>
                     </div>
                 </div>
             </div>
 
             <!-- Trailer 2 -->
             <div class="flex flex-col min-w-[280px] sm:min-w-[340px] md:min-w-[380px] snap-start flex-shrink-0">
-                <div class="relative w-full aspect-[3/4] rounded-apple overflow-hidden shadow-apple cursor-pointer group bg-gradient-miami flex items-center justify-center">
-                    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1000&auto=format&fit=crop" 
-                         alt="Trailer 2 Thumbnail"
-                         onerror="this.src='https://placehold.co/800x1066/1d1d1f/ffffff?text=Trailer+2'"
-                         class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent group-hover:opacity-90 transition-opacity duration-300"></div>
+                <div class="relative w-full aspect-[3/4] rounded-apple overflow-hidden shadow-apple group bg-gradient-miami">
+                    <img src="https://i.ibb.co/gZnHQ60d/IMG-5893.jpg" 
+                         alt="Trailer 2" class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                     
-                    <a href="https://www.youtube.com/watch?v=QdBZY2fkU-0" target="_blank" rel="noopener noreferrer" class="glass-card w-20 h-20 rounded-full flex items-center justify-center relative z-10 transition-all duration-300 transform-gpu group-hover:scale-110 group-hover:shadow-lg">
+                    <a href="https://www.youtube.com/watch?v=VQRLujxTm3c" target="_blank" rel="noopener"
+                       class="glass-card w-20 h-20 rounded-full flex items-center justify-center absolute inset-0 m-auto z-10 group-hover:scale-110 transition-all">
                         <svg class="w-7 h-7 text-white ml-1" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
                     </a>
 
                     <div class="absolute bottom-6 left-6 right-6 text-white z-10">
                         <p class="text-xs font-semibold tracking-widest text-gray-300 uppercase mb-1">WATCH</p>
-                        <h3 class="text-2xl sm:text-3xl font-bold tracking-tight text-white">TRAILER 2</h3>
+                        <h3 class="text-2xl sm:text-3xl font-bold">TRAILER 2</h3>
                     </div>
                 </div>
             </div>
 
-            <!-- Extended Gameplay Look -->
+            <!-- Extended Look -->
             <div class="flex flex-col min-w-[280px] sm:min-w-[340px] md:min-w-[380px] snap-start flex-shrink-0">
-                <div class="relative w-full aspect-[3/4] rounded-apple overflow-hidden shadow-apple cursor-pointer group bg-gradient-miami flex items-center justify-center">
-                    <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1000&auto=format&fit=crop" 
-                         alt="Extended Look Thumbnail"
-                         onerror="this.src='https://placehold.co/800x1066/1d1d1f/ffffff?text=Extended+Look'"
-                         class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent group-hover:opacity-90 transition-opacity duration-300"></div>
+                <div class="relative w-full aspect-[3/4] rounded-apple overflow-hidden shadow-apple group bg-gradient-miami">
+                    <img src="https://i.ibb.co/nqPxDQ52/IMG-5894.jpg" 
+                         alt="Extended Look" class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                     
-                    <a href="https://www.youtube.com/watch?v=QdBZY2fkU-0" target="_blank" rel="noopener noreferrer" class="glass-card w-20 h-20 rounded-full flex items-center justify-center relative z-10 transition-all duration-300 transform-gpu group-hover:scale-110 group-hover:shadow-lg">
+                    <a href="https://youtu.be/tJbzMqJGH4k?si=amMFaQjuzbKpM33k" target="_blank" rel="noopener"
+                       class="glass-card w-20 h-20 rounded-full flex items-center justify-center absolute inset-0 m-auto z-10 group-hover:scale-110 transition-all">
                         <svg class="w-7 h-7 text-white ml-1" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
                     </a>
 
                     <div class="absolute bottom-6 left-6 right-6 text-white z-10">
                         <p class="text-xs font-semibold tracking-widest text-gray-300 uppercase mb-1">WATCH</p>
-                        <h3 class="text-2xl sm:text-3xl font-bold tracking-tight text-white">GAMEPLAY</h3>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Vice City Nights -->
-            <div class="flex flex-col min-w-[280px] sm:min-w-[340px] md:min-w-[380px] snap-start flex-shrink-0">
-                <div class="relative w-full aspect-[3/4] rounded-apple overflow-hidden shadow-apple cursor-pointer group bg-gradient-miami flex items-center justify-center">
-                    <img src="https://images.unsplash.com/photo-1542751110-97427bbecf20?q=80&w=1000&auto=format&fit=crop" 
-                         alt="Vice City Nights Thumbnail"
-                         onerror="this.src='https://placehold.co/800x1066/1d1d1f/ffffff?text=Vice+City+Nights'"
-                         class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent group-hover:opacity-90 transition-opacity duration-300"></div>
-                    
-                    <a href="https://www.youtube.com/watch?v=QdBZY2fkU-0" target="_blank" rel="noopener noreferrer" class="glass-card w-20 h-20 rounded-full flex items-center justify-center relative z-10 transition-all duration-300 transform-gpu group-hover:scale-110 group-hover:shadow-lg">
-                        <svg class="w-7 h-7 text-white ml-1" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-                    </a>
-
-                    <div class="absolute bottom-6 left-6 right-6 text-white z-10">
-                        <p class="text-xs font-semibold tracking-widest text-gray-300 uppercase mb-1">WATCH</p>
-                        <h3 class="text-2xl sm:text-3xl font-bold tracking-tight text-white">VICE NIGHTS</h3>
+                        <h3 class="text-2xl sm:text-3xl font-bold">EXTENDED LOOK</h3>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Screenshots -->
     <section id="screenshots" class="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
         <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-apple-text">Sights of Vice.</h2>
-            <p class="text-md text-apple-text-secondary mt-2">Explore the official map and pristine glimpses into Leonida's vibrant landscapes.</p>
+            <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Sights of Vice</h2>
+            <p class="text-md text-apple-text-secondary mt-2">Glimpses into Leonida</p>
         </div>
 
         <div class="flex overflow-x-auto pb-4 gap-4 no-scrollbar snap-x">
-            <!-- Map Card (Trailer Sized & Compact) -->
-            <div onclick="openFullscreenModal('https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=1600&auto=format&fit=crop', 'Vice City Interactive Map', 'Comprehensive high-resolution cartography of Leonida and surrounding archipelagos.')" class="glass-card rounded-apple min-w-[220px] sm:min-w-[260px] aspect-[4/3] overflow-hidden shadow-apple transition-all duration-300 transform-gpu hover:-translate-y-2 hover:shadow-apple-hover relative group snap-start flex-shrink-0 cursor-pointer">
-                <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=800&auto=format&fit=crop" 
-                     alt="Vice City Map"
-                     onerror="this.src='https://placehold.co/600x450/1d1d1f/ffffff?text=Vice+City+Map'"
-                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors flex flex-col justify-end p-4 text-white">
-                    <span class="text-[9px] font-bold tracking-widest uppercase bg-apple-blue/80 px-2 py-0.5 rounded-full w-max mb-1">Interactive Map</span>
-                    <h3 class="text-sm font-bold">Leonida & Vice City Map</h3>
-                    <p class="text-[10px] text-gray-200">Click to view full screen</p>
+            <div onclick="openModal('https://i.ibb.co/Gv0kXBXn/IMG-5884.jpg', 'Leonida Map', 'High-resolution view of the state')" 
+                 class="glass-card rounded-apple min-w-[220px] sm:min-w-[260px] aspect-[4/3] overflow-hidden shadow-apple hover:-translate-y-2 transition-all cursor-pointer group snap-start">
+                <img src="https://i.ibb.co/Gv0kXBXn/IMG-5884.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Map">
+                <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 flex flex-col justify-end p-4 text-white">
+                    <span class="text-[9px] font-bold tracking-widest uppercase bg-apple-blue/80 px-2 py-0.5 rounded-full w-max mb-1">Map</span>
+                    <h3 class="text-sm font-bold">Leonida & Vice City</h3>
                 </div>
             </div>
 
-            <!-- Screenshot 1 -->
-            <div onclick="openFullscreenModal('https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1600&auto=format&fit=crop', 'Vice City Nightlife', 'Neon lights illuminating the coastline of Vice City.')" class="glass-card rounded-apple min-w-[220px] sm:min-w-[260px] aspect-[4/3] overflow-hidden shadow-apple transition-all duration-300 transform-gpu hover:-translate-y-2 hover:shadow-apple-hover relative group snap-start flex-shrink-0 cursor-pointer">
-                <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=800&auto=format&fit=crop" 
-                     alt="Screenshot 1"
-                     onerror="this.src='https://placehold.co/600x450/e5e7eb/1d1d1f?text=Screenshot+1'"
-                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div onclick="openModal('https://i.ibb.co/DPvnbqt4/IMG-5898.webp', 'Vice City Nightlife', 'Neon-soaked streets')" 
+                 class="glass-card rounded-apple min-w-[220px] sm:min-w-[260px] aspect-[4/3] overflow-hidden shadow-apple hover:-translate-y-2 transition-all cursor-pointer group snap-start relative">
+                <img src="https://i.ibb.co/DPvnbqt4/IMG-5898.webp" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Nightlife">
                 <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                    <span class="bg-white/80 text-black text-[11px] font-bold px-3 py-1.5 rounded-full backdrop-blur-md shadow-md">View Fullscreen</span>
+                    <span class="bg-white/80 text-black text-[11px] font-bold px-3 py-1.5 rounded-full">View Fullscreen</span>
                 </div>
             </div>
 
-            <!-- Screenshot 2 -->
-            <div onclick="openFullscreenModal('https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1600&auto=format&fit=crop', 'Vice City Skyline', 'Panoramic sunset over downtown Vice City skyscrapers.')" class="glass-card rounded-apple min-w-[220px] sm:min-w-[260px] aspect-[4/3] overflow-hidden shadow-apple transition-all duration-300 transform-gpu hover:-translate-y-2 hover:shadow-apple-hover relative group snap-start flex-shrink-0 cursor-pointer">
-                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=800&auto=format&fit=crop" 
-                     alt="Screenshot 2"
-                     onerror="this.src='https://placehold.co/600x450/e5e7eb/1d1d1f?text=Screenshot+2'"
-                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div onclick="openModal('https://i.ibb.co/3mHt3rdp/IMG-5897.webp', 'Vice City Skyline', 'Sunset over the city')" 
+                 class="glass-card rounded-apple min-w-[220px] sm:min-w-[260px] aspect-[4/3] overflow-hidden shadow-apple hover:-translate-y-2 transition-all cursor-pointer group snap-start relative">
+                <img src="https://i.ibb.co/3mHt3rdp/IMG-5897.webp" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Skyline">
                 <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                    <span class="bg-white/80 text-black text-[11px] font-bold px-3 py-1.5 rounded-full backdrop-blur-md shadow-md">View Fullscreen</span>
+                    <span class="bg-white/80 text-black text-[11px] font-bold px-3 py-1.5 rounded-full">View Fullscreen</span>
                 </div>
             </div>
 
-            <!-- Screenshot 3 -->
-            <div onclick="openFullscreenModal('https://images.unsplash.com/photo-1542751110-97427bbecf20?q=80&w=1600&auto=format&fit=crop', 'The Everglades & Swamplands', 'Rural wilderness and airboat trails outside the metropolis.')" class="glass-card rounded-apple min-w-[220px] sm:min-w-[260px] aspect-[4/3] overflow-hidden shadow-apple transition-all duration-300 transform-gpu hover:-translate-y-2 hover:shadow-apple-hover relative group snap-start flex-shrink-0 cursor-pointer">
-                <img src="https://images.unsplash.com/photo-1542751110-97427bbecf20?q=80&w=800&auto=format&fit=crop" 
-                     alt="Screenshot 3"
-                     onerror="this.src='https://placehold.co/600x450/e5e7eb/1d1d1f?text=Screenshot+3'"
-                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div onclick="openModal('https://i.ibb.co/0VstZnLV/IMG-5895.webp', 'The Everglades', 'Swamplands outside the city')" 
+                 class="glass-card rounded-apple min-w-[220px] sm:min-w-[260px] aspect-[4/3] overflow-hidden shadow-apple hover:-translate-y-2 transition-all cursor-pointer group snap-start relative">
+                <img src="https://i.ibb.co/0VstZnLV/IMG-5895.webp" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Everglades">
                 <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                    <span class="bg-white/80 text-black text-[11px] font-bold px-3 py-1.5 rounded-full backdrop-blur-md shadow-md">View Fullscreen</span>
-                </div>
-            </div>
-            
-            <!-- Screenshot 4 -->
-            <div onclick="openFullscreenModal('https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=1600&auto=format&fit=crop', 'Ocean Beach Coastline', 'Bustling boardwalk and sandy beaches under the afternoon sun.')" class="glass-card rounded-apple min-w-[220px] sm:min-w-[260px] aspect-[4/3] overflow-hidden shadow-apple transition-all duration-300 transform-gpu hover:-translate-y-2 hover:shadow-apple-hover relative group snap-start flex-shrink-0 cursor-pointer">
-                <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=800&auto=format&fit=crop" 
-                     alt="Screenshot 4"
-                     onerror="this.src='https://placehold.co/600x450/e5e7eb/1d1d1f?text=Screenshot+4'"
-                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                    <span class="bg-white/80 text-black text-[11px] font-bold px-3 py-1.5 rounded-full backdrop-blur-md shadow-md">View Fullscreen</span>
+                    <span class="bg-white/80 text-black text-[11px] font-bold px-3 py-1.5 rounded-full">View Fullscreen</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Fullscreen Lightbox Modal -->
+    <!-- Fullscreen Modal -->
     <div id="fullscreenModal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-xl flex flex-col items-center justify-center p-4 sm:p-8 opacity-0 pointer-events-none transition-opacity duration-300">
-        <button onclick="closeFullscreenModal()" class="absolute top-6 right-6 text-white bg-white/10 hover:bg-white/20 p-3 rounded-full transition-colors z-50">
+        <button onclick="closeModal()" class="absolute top-6 right-6 text-white bg-white/10 hover:bg-white/20 p-3 rounded-full transition-colors z-50">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
         </button>
         <div class="max-w-6xl w-full max-h-[80vh] flex flex-col items-center">
-            <img id="modalImage" src="" alt="Fullscreen view" class="max-h-[70vh] w-auto object-contain rounded-2xl shadow-2xl mb-4">
-            <h3 id="modalTitle" class="text-white text-xl font-bold tracking-tight"></h3>
+            <img id="modalImage" src="" alt="Fullscreen" class="max-h-[70vh] w-auto object-contain rounded-2xl shadow-2xl mb-4">
+            <h3 id="modalTitle" class="text-white text-xl font-bold"></h3>
             <p id="modalSubtitle" class="text-gray-400 text-sm mt-1 text-center"></p>
         </div>
     </div>
 
+    <!-- Pre-order -->
     <section id="pre-order" class="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
         <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-apple-text">Choose Your Edition.</h2>
-            <p class="text-md text-apple-text-secondary mt-2">Secure your copy before launch for PlayStation 5 and Xbox Series X|S.</p>
+            <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Choose Your Edition</h2>
+            <p class="text-md text-apple-text-secondary mt-2">Available for PlayStation 5 and Xbox Series X|S</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Standard Edition -->
-            <div class="glass-card rounded-apple p-8 flex flex-col justify-between transition-all duration-300 transform-gpu hover:-translate-y-2 hover:shadow-apple-hover">
+          
+     <!-- Standard -->
+           
+          <div class="glass-card rounded-apple p-8 flex flex-col justify-between hover:-translate-y-2 transition-all">
                 <div>
-                    <h3 class="text-xl font-semibold text-apple-text mb-2">Standard Edition</h3>
-                    <p class="text-sm text-apple-text-secondary mb-6">Includes the base game for PlayStation 5 or Xbox Series X|S.</p>
-                    <div class="text-4xl font-bold tracking-tight text-apple-text mb-8">$69.99</div>
+                    <h3 class="text-xl font-semibold mb-2">Standard Edition</h3>
+                    <p class="text-sm text-apple-text-secondary mb-6">Base game for PS5 or Xbox Series X|S</p>
+                    <div class="text-4xl font-bold mb-8">$69.99</div>
                 </div>
-                <div class="space-y-3">
-                    <a href="https://www.rockstargames.com/gta-vi" target="_blank" rel="noopener noreferrer" class="w-full block text-center bg-apple-blue hover:bg-apple-blue-hover text-white font-medium py-3 px-6 rounded-full transition-colors shadow-sm">
-                        Buy Standard
-                    </a>
-                    <div class="flex items-center justify-center gap-3 pt-2">
-                        <a href="https://www.playstation.com" target="_blank" rel="noopener noreferrer" class="text-[11px] text-apple-text-secondary hover:text-black font-semibold flex items-center gap-1">
-                            PS5 Version
-                        </a>
-                        <span class="text-gray-300">•</span>
-                        <a href="https://www.xbox.com" target="_blank" rel="noopener noreferrer" class="text-[11px] text-apple-text-secondary hover:text-black font-semibold flex items-center gap-1">
-                            Xbox Series X|S Version
-                        </a>
-                    </div>
-                </div>
+                <a href="https://www.rockstargames.com/VI/" target="_blank" 
+                   class="w-full block text-center bg-apple-blue hover:bg-apple-blue-hover text-white font-medium py-3 px-6 rounded-full transition-colors">
+                    Buy Standard
+                </a>
             </div>
 
-            <!-- Ultimate Edition -->
-            <div class="glass-card rounded-apple p-8 flex flex-col justify-between border-2 border-apple-blue/30 transition-all duration-300 transform-gpu hover:-translate-y-2 hover:shadow-apple-hover">
+            <!-- Ultimate -->
+            <div class="glass-card rounded-apple p-8 flex flex-col justify-between border-2 border-apple-blue/30 hover:-translate-y-2 transition-all">
                 <div>
                     <span class="inline-block bg-apple-blue/10 text-apple-blue text-xs font-semibold px-3 py-1 rounded-full mb-3 uppercase tracking-wider">Most Popular</span>
-                    <h3 class="text-xl font-semibold text-apple-text mb-2">Ultimate Edition</h3>
-                    <p class="text-sm text-apple-text-secondary mb-6">Includes base game, Leonida Weapon Pack, and 3 days early access.</p>
-                    <div class="text-4xl font-bold tracking-tight text-apple-text mb-8">$99.99</div>
+                    <h3 class="text-xl font-semibold mb-2">Ultimate Edition</h3>
+                    <p class="text-sm text-apple-text-secondary mb-6">Base game + bonus content + early access</p>
+                    <div class="text-4xl font-bold mb-8">$99.99</div>
                 </div>
-                <div class="space-y-3">
-                    <a href="https://www.rockstargames.com/gta-vi" target="_blank" rel="noopener noreferrer" class="w-full block text-center bg-apple-blue hover:bg-apple-blue-hover text-white font-medium py-3 px-6 rounded-full transition-colors shadow-sm">
-                        Buy Ultimate
-                    </a>
-                    <div class="flex items-center justify-center gap-3 pt-2">
-                        <a href="https://www.playstation.com" target="_blank" rel="noopener noreferrer" class="text-[11px] text-apple-text-secondary hover:text-black font-semibold flex items-center gap-1">
-                            PS5 Version
-                        </a>
-                        <span class="text-gray-300">•</span>
-                        <a href="https://www.xbox.com" target="_blank" rel="noopener noreferrer" class="text-[11px] text-apple-text-secondary hover:text-black font-semibold flex items-center gap-1">
-                            Xbox Series X|S Version
-                        </a>
-                    </div>
-                </div>
+                <a href="https://www.rockstargames.com/VI/" target="_blank" 
+                   class="w-full block text-center bg-apple-blue hover:bg-apple-blue-hover text-white font-medium py-3 px-6 rounded-full transition-colors">
+                    Buy Ultimate
+                </a>
             </div>
         </div>
-    </section>
+    </section>      
 
+    <!-- Footer -->
     <footer class="border-t border-gray-200 mt-12 py-10">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
-            <span class="text-xl font-bold tracking-tighter text-gray-400 mb-4">VI</span>
-            <p class="text-xs text-gray-500 max-w-xl">
-                Copyright © 2026. This is a conceptual promotional page matching official artwork layouts. Grand Theft Auto is a registered trademark of Take-Two Interactive Software, Inc.
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <span class="text-xl font-bold tracking-tighter text-gray-400 mb-4 block">VI</span>
+            <p class="text-xs text-gray-500 max-w-xl mx-auto">
+                This is a fan-made conceptual page. Grand Theft Auto is a registered trademark of Take-Two Interactive Software, Inc. 
+                Official site: <a href="https://www.rockstargames.com/VI/" class="underline hover:text-black" target="_blank">rockstargames.com/VI</a>
             </p>
         </div>
     </footer>
 
     <script>
+          // Countdown
         const countDownDate = new Date("Nov 19, 2026 00:00:00").getTime();
-
         const elDays = document.getElementById("days");
         const elHours = document.getElementById("hours");
         const elMinutes = document.getElementById("minutes");
         const elSeconds = document.getElementById("seconds");
 
-        const formatNumber = (num) => num < 10 ? `0${num}` : num;
+        const format = (n) => n < 10 ? `0${n}` : n;
 
-        const x = setInterval(function() {
+        setInterval(() => {
             const now = new Date().getTime();
             const distance = countDownDate - now;
-            
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            
+
             if (distance > 0) {
-                elDays.innerHTML = formatNumber(days);
-                elHours.innerHTML = formatNumber(hours);
-                elMinutes.innerHTML = formatNumber(minutes);
-                elSeconds.innerHTML = formatNumber(seconds);
+                elDays.innerHTML = format(Math.floor(distance / (1000 * 60 * 60 * 24)));
+                elHours.innerHTML = format(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+                elMinutes.innerHTML = format(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)));
+                elSeconds.innerHTML = format(Math.floor((distance % (1000 * 60)) / 1000));
             } else {
-                clearInterval(x);
-                elDays.innerHTML = "00";
-                elHours.innerHTML = "00";
-                elMinutes.innerHTML = "00";
-                elSeconds.innerHTML = "00";
+                elDays.innerHTML = elHours.innerHTML = elMinutes.innerHTML = elSeconds.innerHTML = "00";
             }
         }, 1000);
 
-        // Fullscreen Modal Functions
-        function openFullscreenModal(imgSrc, title, subtitle) {
-            const modal = document.getElementById('fullscreenModal');
-            const modalImg = document.getElementById('modalImage');
-            const modalTitle = document.getElementById('modalTitle');
-            const modalSubtitle = document.getElementById('modalSubtitle');
-
-            modalImg.src = imgSrc;
-            modalTitle.innerText = title;
-            modalSubtitle.innerText = subtitle;
-
-            modal.classList.remove('opacity-0', 'pointer-events-none');
+        // Modal
+        function openModal(src, title, subtitle) {
+            document.getElementById('modalImage').src = src;
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalSubtitle').innerText = subtitle;
+            document.getElementById('fullscreenModal').classList.remove('opacity-0', 'pointer-events-none');
             document.body.style.overflow = 'hidden';
         }
 
-        function closeFullscreenModal() {
-            const modal = document.getElementById('fullscreenModal');
-            modal.classList.add('opacity-0', 'pointer-events-none');
+        function closeModal() {
+            document.getElementById('fullscreenModal').classList.add('opacity-0', 'pointer-events-none');
             document.body.style.overflow = 'auto';
         }
 
-        // Close on ESC key
+// Close on ESC key
         document.addEventListener('keydown', function(event) {
             if (event.key === "Escape") {
-                closeFullscreenModal();
+                closeModal();
             }
-        });
+        }
+                                 );  
     </script>
+            
 </body>
 </html>
