@@ -35,6 +35,18 @@
     </script>
     
     <style>
+      
+      html {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+}
         body {
             background-color: #f5f5f7;
             color: #1d1d1f;
@@ -50,7 +62,8 @@
             background: rgba(255, 255, 255, 0.65);
             backdrop-filter: blur(24px);
             -webkit-backdrop-filter: blur(24px);
-            border: 1px solid rgba(255, 255, 255, 0.8);
+
+border: 1px solid rgba(255, 255, 255, 0.8);         
             box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
         }
         .rounded-apple { border-radius: 28px; }
@@ -86,7 +99,9 @@
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-14 sm:h-16">
                 <div class="flex-shrink-0 flex items-center">
-                    <span class="text-xl font-bold tracking-tighter text-gradient-pastel">VI</span>
+                    <span class="text-xl font-bold tracking-tighter text-gradient-pastel">VI </span> 
+<span class="ml-2 text-[7px] font-bold text-black">made by Gagan Aulakh</span>
+                 
                 </div>
                 
                 <div class="hidden md:flex space-x-6 items-center">
@@ -310,28 +325,29 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           
      <!-- Standard -->
-           
+      
           <div class="glass-card rounded-apple p-8 flex flex-col justify-between hover:-translate-y-2 transition-all">
                 <div>
                     <h3 class="text-xl font-semibold mb-2">Standard Edition</h3>
                     <p class="text-sm text-apple-text-secondary mb-6">Base game for PS5 or Xbox Series X|S</p>
-                    <div class="text-4xl font-bold mb-8">$69.99</div>
+                    <div class="text-4xl font-bold mb-8">₹5,999</div>
                 </div>
-                <a href="https://www.rockstargames.com/VI/" target="_blank" 
+                <a href="https://www.playstation.com/en-in/games/grand-theft-auto-vi/" target="_blank" 
                    class="w-full block text-center bg-apple-blue hover:bg-apple-blue-hover text-white font-medium py-3 px-6 rounded-full transition-colors">
                     Buy Standard
                 </a>
             </div>
 
             <!-- Ultimate -->
-            <div class="glass-card rounded-apple p-8 flex flex-col justify-between border-2 border-apple-blue/30 hover:-translate-y-2 transition-all">
+          
+            <div class="glass-card rounded-apple p-8 flex flex-col justify-between hover:-translate-y-2 transition-all">
                 <div>
                     <span class="inline-block bg-apple-blue/10 text-apple-blue text-xs font-semibold px-3 py-1 rounded-full mb-3 uppercase tracking-wider">Most Popular</span>
                     <h3 class="text-xl font-semibold mb-2">Ultimate Edition</h3>
                     <p class="text-sm text-apple-text-secondary mb-6">Base game + bonus content + early access</p>
-                    <div class="text-4xl font-bold mb-8">$99.99</div>
+                    <div class="text-4xl font-bold mb-8">₹7,499</div>
                 </div>
-                <a href="https://www.rockstargames.com/VI/" target="_blank" 
+                <a href="https://www.playstation.com/en-in/games/grand-theft-auto-vi/" target="_blank" 
                    class="w-full block text-center bg-apple-blue hover:bg-apple-blue-hover text-white font-medium py-3 px-6 rounded-full transition-colors">
                     Buy Ultimate
                 </a>
@@ -351,7 +367,8 @@
     </footer>
 
     <script>
-          // Countdown
+
+      // Countdown
         const countDownDate = new Date("Nov 19, 2026 00:00:00").getTime();
         const elDays = document.getElementById("days");
         const elHours = document.getElementById("hours");
